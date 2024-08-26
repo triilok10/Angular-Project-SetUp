@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-
 export interface Book {
-  bookID: number;
+  bookID?: number; 
   bookName: string;
   bookAuthorName: string;
   bookMedium: string;
@@ -20,20 +19,18 @@ export class BookService {
   constructor(private http: HttpClient) {}
 
   getBooks(): Observable<Book[]> {
-    console.log(this.http.get<Book[]>(`${this.apiURL}\GetBookList`))
-    return this.http.get<Book[]>(`${this.apiURL}\GetBookList`);
+    return this.http.get<Book[]>(`${this.apiURL}/GetBookList`);
   }
 
-addBooks(books:Book):Observable<Book>{
-return this.http.post<Book>(`${this.apiURL}\InsertBook`,books);
-}
-
-UpdateBooks():Observable<Book[]>{
-  return this.http.get<Book[]>(`${this.apiURL}\InsertBook\{BooKId}`);
+  addBooks(book: Book): Observable<Book> {
+    return this.http.post<Book>(`${this.apiURL}/InsertBook`, book);
   }
 
-  DeleteBooks():Observable<Book>{
-    return this.http.delete<Book>(`${this.apiURL}\InsertBook\{bookID}`);
-    }
+  updateBooks(bookId: number, book: Book): Observable<Book> {
+    return this.http.put<Book>(`${this.apiURL}/UpdateBook/${bookId}`, book);
+  }
 
+  deleteBooks(bookId: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiURL}/DeleteBook/${bookId}`);
+  }
 }
