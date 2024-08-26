@@ -1,1 +1,31 @@
-<p>edit-book works!</p>
+<div class="container mt-5">
+    <h3 class="text-center mb-4">Getting data using the Backend from .NET Core Web API</h3>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <table class="table table-striped table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th>Book Id</th>
+              <th>Book Name</th>
+              <th>Book Author Name</th>
+              <th>Book Medium</th>
+              <th>Book Published Year</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let book of bookList">
+              <td>{{ book.bookID }}</td>
+              <td>{{ book.bookName }}</td>
+              <td>{{ book.bookAuthorName }}</td>
+              <td>{{ book.bookMedium }}</td>
+              <td>{{ book.bookPublishedYear }}</td>
+              <td><a href="">Edit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

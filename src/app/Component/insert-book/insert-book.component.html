@@ -1,32 +1,35 @@
 <div class="container mt-5">
     <div class="text-center mb-4">
-      <h1>Insert a New Record</h1>
+        <h1>Insert a New Record</h1>
     </div>
-  
+
     <div class="form-wrapper">
-      <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <label for="bookName">Book Name</label>
-          <input type="text" class="form-control" id="bookName" formControlName="bookName" placeholder="Enter Book Name">
-        </div>
-  <br/>
-        <div class="form-group">
-          <label for="bookAuthorName">Book Author Name</label>
-          <input type="text" class="form-control" id="bookAuthorName" formControlName="bookAuthorName" placeholder="Enter Book Author Name">
-        </div>
-        <br/>
-        <div class="form-group">
-          <label for="bookMedium">Book Medium</label>
-          <input type="text" class="form-control" id="bookMedium" formControlName="bookMedium" placeholder="Enter Book Medium">
-        </div>
-        <br/>
-        <div class="form-group">
-          <label for="bookPublishedYear">Book Publish Year</label>
-          <input type="text" class="form-control" id="bookPublishedYear" formControlName="bookPublishedYear" placeholder="Enter Book Publish Year">
-        </div>
-        <br/>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="bookName">Book Name</label>
+                <input type="text" class="form-control" id="bookName" formControlName="bookName"
+                    placeholder="Enter Book Name">
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="bookAuthorName">Book Author Name</label>
+                <input type="text" class="form-control" id="bookAuthorName" formControlName="bookAuthorName"
+                    placeholder="Enter Book Author Name">
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="bookMedium">Book Medium</label>
+                <input type="text" class="form-control" id="bookMedium" formControlName="bookMedium"
+                    placeholder="Enter Book Medium">
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="bookPublishedYear">Book Publish Year</label>
+                <input type="text" class="form-control" id="bookPublishedYear" formControlName="bookPublishedYear"
+                    placeholder="Enter Book Publish Year">
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
-  </div>
-  
+</div>

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Book {
-  bookID?: number; 
+  bookID: number; 
   bookName: string;
   bookAuthorName: string;
   bookMedium: string;
@@ -26,11 +26,16 @@ export class BookService {
     return this.http.post<Book>(`${this.apiURL}/InsertBook`, book);
   }
 
-  updateBooks(bookId: number, book: Book): Observable<Book> {
-    return this.http.put<Book>(`${this.apiURL}/UpdateBook/${bookId}`, book);
+  
+  updateBookIdGet(bookId: number): Observable<Book> {
+    return this.http.get<Book>(`${this.apiURL}/UpdateBook/${bookId}`);
   }
 
-  deleteBooks(bookId: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiURL}/DeleteBook/${bookId}`);
+  updateBooks(bookId: number): Observable<Book> {
+    return this.http.put<Book>(`${this.apiURL}/UpdateBook/${bookId}`,bookId);
   }
+  deleteBooks(bookID: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiURL}/DeleteBook/${bookID}`);
+  }
+  
 }
