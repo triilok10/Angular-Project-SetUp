@@ -1,0 +1,23 @@
+<p>data-binding works!</p>
+
+
+<h2>This is to check the How the Data Binding works.</h2>
+<h3>One way Data Binding from TS to HTML View Page</h3>
+<h4 class="bg-primary">Data Binding using the Interpolation</h4>
+<h2>Name</h2> {{Name}}
+<br>
+<h2>IsIndia</h2>{{isIndian}}
+<br>
+<h2>Number</h2>{{Int}}
+<br>
+<h2>DOB</h2>{{DOB}}
+
+<h2>
+    Insert the value in the Input Box:
+    <Input type="text"  value="{{Name}}"/>
+</h2>
+<br>
+<br>
+<h3>Property Binding : Bind the data in the Property. Property mean like: placeholder,class, type, value etc in input tag</h3>
+<h2><input type="text" class="{{myClass}}" [value]="myClass"></h2> <!--  Example  of the Property Binding -->
+<button class="btn btn-danger" (click)="showAlert('Lets save the Message')"> Show Message</button>

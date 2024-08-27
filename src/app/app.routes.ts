@@ -3,6 +3,7 @@ import { InsertBookComponent } from './Component/insert-book/insert-book.compone
 import { GetListComponent } from './Component/get-list/get-list.component';
 import { EditBookComponent } from './Component/edit-book/edit-book.component';
 import { DeleteBookComponent } from './Component/delete-book/delete-book.component';
+import { DataBindingComponent } from './Component/data-binding/data-binding.component';
 
 export const routes: Routes = [
     {
@@ -20,5 +21,8 @@ export const routes: Routes = [
     {
         path: 'Delete-Book',
         component:DeleteBookComponent
+    },{
+        path:'Data-Binding',
+        component:DataBindingComponent
     }
 ];
