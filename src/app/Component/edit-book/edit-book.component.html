@@ -21,7 +21,7 @@
               <td>{{ book.bookAuthorName }}</td>
               <td>{{ book.bookMedium }}</td>
               <td>{{ book.bookPublishedYear }}</td>
-              <td><a href="">Edit</a></td>
+              <td><a href="#" (click)="getBook(book.bookID)">Edit</a></td>
             </tr>
           </tbody>
         </table>
