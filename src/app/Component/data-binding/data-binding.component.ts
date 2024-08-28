@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-data-binding',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './data-binding.component.html',
   styleUrl: './data-binding.component.css'
 })
@@ -13,10 +14,15 @@ export class DataBindingComponent {
   isIndian: boolean = true;
   Int: number = 8058436268;
   DOB: Date = new Date();
-  myClass:string = "bg-danger";
+  myClass: string = "bg-danger";
+  stateName: string = "Rajasthan";
 
-
-  showAlert(Message:string){
+  showAlert(Message: string) {
     alert(Message)
   }
+  FirstName = signal("This is the Signal");
+  changeName() {
+    this.Name = "This is Trilok Chand Swami";
+  }
+
 }

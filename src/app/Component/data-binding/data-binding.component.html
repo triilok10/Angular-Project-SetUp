@@ -14,10 +14,34 @@
 
 <h2>
     Insert the value in the Input Box:
-    <Input type="text"  value="{{Name}}"/>
+    <Input type="text" value="{{Name}}" />
 </h2>
 <br>
 <br>
-<h3>Property Binding : Bind the data in the Property. Property mean like: placeholder,class, type, value etc in input tag</h3>
+<h3>Property Binding : Bind the data in the Property. Property mean like: placeholder,class, type, value etc in input
+    tag</h3>
 <h2><input type="text" class="{{myClass}}" [value]="myClass"></h2> <!--  Example  of the Property Binding -->
 <button class="btn btn-danger" (click)="showAlert('Lets save the Message')"> Show Message</button>
+<button class="btn btn-primary" (click)="changeName()">Name</button>
+<br />
+<div class="text-center col-6">
+    <input type="text" [(ngModel)]="Name" /> - {{Name}}
+</div>
+<div>
+    <p>State Dropdown with the Value Selected, Below is the Example of this.</p>
+    <select [(ngModel)]="stateName">
+      <option value="">Select an Option</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Haryana">Haryana</option>
+      <option value="Bihar">Bihar</option>
+      <option value="Goa">Goa</option>
+    </select>
+</div>
+
+<h3>Two way data binding means in Angular when we change the Value in HTML FILE it's changes also appear in the Typescript File.</h3>
+
+<h4>Signal</h4>
+<br>
+<input type="text" [(ngModel)]="FirstName">
